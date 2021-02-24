@@ -1,0 +1,26 @@
+﻿@model IEnumerable<HTTP5203_Lab5_KunalSailor.Models.Book>
+@{
+    ViewData["Title"] = "Book";
+}
+
+<h1>Books</h1>
+<a class="btn btn-default" asp-action="Add">Add a Book</a>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        { 
+        <tr>
+            <td>@Html.DisplayFor(m => item.Title)</td>
+            <td>@Html.DisplayFor(m => item.Firstname)</td>
+            <td>@Html.DisplayFor(m => item.Lastname)</td>
+        </tr>
+        }
+    </tbody>
+</table>
